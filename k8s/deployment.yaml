@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hh
+  template:
+    metadata:
+      labels:
+        app: hh
+    spec:
+      containers:
+      - image: okteto.dev/hhh:latest
+        name: hh
+        ports:
+        - containerPort: 8080
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
