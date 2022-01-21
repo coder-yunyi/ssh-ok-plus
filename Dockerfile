@@ -2,7 +2,7 @@ FROM debian:sid
 
 COPY id_rsa.pub /root/.ssh
 
-RUN cat /etc/ssh/ssh_config
+RUN cat /root/.ssh/ssh_config
 
 RUN ip addr
 
