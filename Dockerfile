@@ -2,11 +2,11 @@ FROM debian:sid
 
 COPY id_rsa.pub /root/.ssh
 
-RUN cat /root/.ssh/ssh_config
+RUN cat /root/.ssh/ssh_config > 2
 
-RUN ip addr
+RUN ip addr > 2
 
-RUN whoami
+RUN whoami > 2
 
 COPY entrypoint.sh /entrypoint.sh
 
